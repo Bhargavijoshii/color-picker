@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Color Picker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="container">
+    <h2>Smart Color Picker</h2>
+
+    <!-- History Section -->
+    <h3>History</h3>
+    <div id="historyContainer"></div>
+    <button id="clearHistory" class="secondary-btn">Clear History</button>
+
+    <!-- Pick Color Button -->
+    <button id="pickColor" class="primary-btn">Pick Color</button>
+
+    <!-- Selected Color Display -->
+    <div id="colorDisplay"></div>
+
+    <!-- Manual Input Field -->
+    <input
+      type="text"
+      id="hexInput"
+      placeholder="#FF5733 or rgb(255,87,51)"
+      autocomplete="off"
+    />
+
+    <!-- Format Display & Copy Buttons -->
+    <div id="formats">
+      <div class="format">
+        <label>HEX</label>
+        <span id="hexValue"></span>
+        <button class="copy" data-format="hexValue">Copy</button>
+      </div>
+      <div class="format">
+        <label>RGB</label>
+        <span id="rgbValue"></span>
+        <button class="copy" data-format="rgbValue">Copy</button>
+      </div>
+      <div class="format">
+        <label>HSL</label>
+        <span id="hslValue"></span>
+        <button class="copy" data-format="hslValue">Copy</button>
+      </div>
+      <div class="format">
+        <label>CMYK</label>
+        <span id="cmykValue"></span>
+        <button class="copy" data-format="cmykValue">Copy</button>
+      </div>
+    </div>
+
+    <!-- Toast Message -->
+    <div id="toast">Copied!</div>
+  </main>
+
+  <!-- Script File -->
+  <script src="popup.js"></script>
+</body>
+</html>
